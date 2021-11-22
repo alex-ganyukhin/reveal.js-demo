@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+<head>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="dist/theme/vs-syntax-hl-for-white-reveal-js.css">
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-auto-animate>
+				<pre style="width: fit-content !important;"><code style="width: fit-content !important;" data-trim data-noescape data-line-numbers class="cpp"><script type="text/template">
+					#include <vector>
+				</script></code></pre>
+			</section>
+		</div>
+	</div>
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/search/search.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+		});
+
+	</script>
+</body>
+</html>

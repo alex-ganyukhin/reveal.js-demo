@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html>
+<head>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="dist/theme/vs-syntax-hl-for-white-reveal-js.css">
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-auto-animate>
+				<h2>Auto-Animate</h2>
+				<div class="r-hstack justify-center">
+					<div data-id="box1" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+					<div data-id="box2" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+					<div data-id="box3" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+				</div>
+			</section>
+			<section data-auto-animate>
+				<div class="r-hstack justify-center">
+					<div data-id="box1" data-auto-animate-delay="0" style="background: cyan; width: 150px; height: 100px; margin: 10px;"></div>
+					<div data-id="box2" data-auto-animate-delay="0.1" style="background: magenta; width: 150px; height: 100px; margin: 10px;"></div>
+					<div data-id="box3" data-auto-animate-delay="0.2" style="background: yellow; width: 150px; height: 100px; margin: 10px;"></div>
+				</div>
+				<h2 style="margin-top: 20px;">Auto-Animate</h2>
+			</section>
+			<section data-auto-animate>
+				<div class="r-stack">
+					<div data-id="box1" style="background: cyan; width: 300px; height: 300px; border-radius: 200px;"></div>
+					<div data-id="box2" style="background: magenta; width: 200px; height: 200px; border-radius: 200px;"></div>
+					<div data-id="box3" style="background: yellow; width: 100px; height: 100px; border-radius: 200px;"></div>
+				</div>
+				<h2 style="margin-top: 20px;">Auto-Animate</h2>
+			</section>
+		</div>
+	</div>
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/search/search.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+		});
+
+	</script>
+</body>
+</html>

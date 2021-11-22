@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html>
+<head>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="dist/theme/vs-syntax-hl-for-white-reveal-js.css">
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-auto-animate>
+				<h2>Объемный код</h2>
+				<pre><code data-trim data-noescape data-line-numbers="1-14|28-41|1-14|14-28|1-14" class="cpp"><script type="text/template">
+					#include <iostream>
+					using namespace std;
+					bool checkPrimeNumber(int);
+					int main() {
+						int n;
+						cout << "Enter a positive  integer: ";
+						cin >> n;
+						if (checkPrimeNumber(n))
+							cout << n << " is a prime number.";
+						else
+							cout << n << " is not a prime number.";
+						return 0;
+					}
+					bool checkPrimeNumber(int n) {
+						bool isPrime = true;
+						// 0 and 1 are not prime numbers
+						if (n == 0 || n == 1) {
+							isPrime = false;
+						}
+						else {
+							for (int i = 2; i <= n / 2; ++i) {
+								if (n % i == 0) {
+									isPrime = false;
+									break;
+								}
+							}
+						}
+						return isPrime;
+					}
+					float calculateSD(float data[]) {
+						float sum = 0.0, mean, standardDeviation = 0.0;
+						int i;
+						for(i = 0; i < 10; ++i) {
+							sum += data[i];
+						}
+						mean = sum / 10;
+						for(i = 0; i < 10; ++i) {
+							standardDeviation += pow(data[i] - mean, 2);
+						}
+						return sqrt(standardDeviation / 10);
+					}
+				</script></code></pre>
+			</section>
+		</div>
+	</div>
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/search/search.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+		});
+
+	</script>
+</body>
+</html>
